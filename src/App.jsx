@@ -12,9 +12,9 @@ const App = () => {
   
   return (
     <>
-        <Navbar/>
-        <Header/>
-        {/* <About/> */}
+        {/* <Navbar/>
+        <Header/> */}
+        <About/>
         {/* <Services/> */}
         {/* <Work/>
         <Contact/>
