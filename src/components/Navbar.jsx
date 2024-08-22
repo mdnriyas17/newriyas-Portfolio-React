@@ -66,8 +66,8 @@ const Navbar = () => {
 
     <nav ref={navRef} className="w-full fixed top-0  px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
 
-<span className="w-28 cursor-pointer mx-0 mr-14 dark:hidden"> MOHAMEDRIYAS</span>
-<span className="w-28 cursor-pointer mx-0 mr-14 hidden dark:block"> MOHAMEDRIYAS</span>
+<span className="w-28 cursor-pointer mx-0 mr-14 dark:hidden"> <a href="#top">MOHAMEDRIYAS</a></span>
+<span className="w-28 cursor-pointer mx-0 mr-14 hidden dark:block"> <a href="#top">MOHAMEDRIYAS</a></span>
         <ul ref={navLinkRef} className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo
         dark:border dark:border-white/50 dark:bg-transparent ">
             <li><a href="#top">Home</a></li>
