@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="box-border fixed top-0  w-full -z-10 translate-y-[-80%]
+    <div className="box-border fixed top-0  w-11/12 -z-10 translate-y-[-80%]
     dark:hidden">
         <img src={header_bg_color} alt="" className="w-full"/>
     </div>

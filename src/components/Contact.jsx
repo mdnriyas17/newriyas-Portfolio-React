@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="box-border w-full px-[12%] py-10 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none"
+      className="box-border w-11/12 px-[12%] py-10 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none"
     >
       <div data-aos="zoom-in-up">
         <h4 className="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
