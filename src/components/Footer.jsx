@@ -24,7 +24,7 @@ const Footer = () => {
             <a href="tel: +91 8531803391">+91 8531803391</a>
         </div>
     </div>
-    <div className="box-border text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+    <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
         <p>© {date} Mohamedriyas. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
             <li><a target='_blank' href="https://github.com/mdnriyas17">GitHub</a></li>

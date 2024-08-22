@@ -7,7 +7,7 @@ import { TypeAnimation } from 'react-type-animation';
 const Header = () => {
 
   return (
-    <div className="box-border w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
     <img src={profile_img} alt="" className="rounded-full w-32"/>
     <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
         Hi! I'm Mohamedriyas P</h3>
@@ -19,6 +19,7 @@ const Header = () => {
       speed={2}
 
       /> */}
+      Full Stack Web Developer
     </h1>
     <p className="max-w-2xl mx-auto font-Ovo">I am a Full Stack Web Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with Prest organizations, contributing to their success and growth.</p>
 
