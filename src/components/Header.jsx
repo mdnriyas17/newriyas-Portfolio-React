@@ -20,7 +20,7 @@ const Header = () => {
 
       />
     </h1>
-    <p className="max-w-2xl mx-auto font-Ovo">I am a Full Stack Web Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with Prest organizations, contributing to their success and growth.</p>
+    <p className="max-w-2xl mx-auto px-auto font-Ovo">I am a Full Stack Web Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with Prest organizations, contributing to their success and growth.</p>
 
     <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <a href="#contact"
