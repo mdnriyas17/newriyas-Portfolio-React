@@ -1,5 +1,5 @@
 import React from 'react'
-import profile_img from '../assets/profile-img.png'
+import profile_img from '../assets/mypic.jpg'
 import right_arrow_white from '../assets/right-arrow-white.png'
 import download_icon from '../assets/download-icon.png'
 import { TypeAnimation } from 'react-type-animation';

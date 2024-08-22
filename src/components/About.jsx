@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import user_image from "../assets/user-image.png";
+import user_image from "../assets/mainimage.jpg";
 import circular_text from "../assets/circular-text.png";
 import dev_icon from "../assets/dev-icon.png";
 import code_icon from "../assets/code-icon.png";
