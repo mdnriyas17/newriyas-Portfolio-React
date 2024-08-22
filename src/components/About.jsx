@@ -27,7 +27,7 @@ const About = () => {
   });
 
   return (
-    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div id="about" className="box-border w-full px-[12%] py-10 scroll-mt-20">
       <div data-aos="fade-up-right">
         <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
         <h2 className="text-center text-5xl font-Ovo">About me</h2>
