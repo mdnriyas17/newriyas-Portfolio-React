@@ -11,79 +11,44 @@ const Contact = () => {
     });
   });
   const [result, setResult] = useState("");
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    const hCaptcha = event.target.querySelector(
-      "textarea[name=h-captcha-response]"
-    ).value;
-    if (!hCaptcha) {
-      event.preventDefault();
-      setResult("Please fill out captcha field");
-      return;
-    }
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [message, setmessage] = useState("");
+  const [isdisabled, setisdisabled] = useState(false);
 
-    // ----- Enter your Web3 Forms Access key below---------
+  const onSubmit = async (e) => {
+      setisdisabled(true);
+      e.preventDefault();
+      const data = {
+          name,
+          email,
+          message
+      };
+     
+      const response = await fetch(
+          "https://new-riyas-profolio-mail.onrender.com/send",
+          {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json",
+              },
+              body: JSON.stringify(data),
+          }
+      );
 
-    formData.append("access_key", "--- enter your access key here-------");
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    }).then((res) => res.json());
-
-    if (res.success) {
-      console.log("Success", res);
-      setResult(res.message);
-      event.target.reset();
-    } else {
-      console.log("Error", res);
-      setResult(res.message);
-    }
+      const result = await response.json();
+      if (response.status === 200) {
+         alert("Sent successfully!");
+         setname("");
+         setemail("");
+         setmessage("");
+         setisdisabled(false);
+      } else {
+         alert("Something went wrong!");
+      }
+     
   };
-
-  function CaptchaLoader() {
-    const captchadiv = document.querySelectorAll('[data-captcha="true"]');
-    if (captchadiv.length) {
-      let lang = null;
-      let onload = null;
-      let render = null;
-
-      captchadiv.forEach(function (item) {
-        const sitekey = item.dataset.sitekey;
-        lang = item.dataset.lang;
-        onload = item.dataset.onload;
-        render = item.dataset.render;
-
-        if (!sitekey) {
-          item.dataset.sitekey = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
-        }
-      });
-
-      let scriptSrc = "https://js.hcaptcha.com/1/api.js?recaptchacompat=off";
-      if (lang) {
-        scriptSrc += `&hl=${lang}`;
-      }
-      if (onload) {
-        scriptSrc += `&onload=${onload}`;
-      }
-      if (render) {
-        scriptSrc += `&render=${render}`;
-      }
-
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.async = true;
-      script.defer = true;
-      script.src = scriptSrc;
-      document.body.appendChild(script);
-    }
-  }
-
-  useEffect(() => {
-    CaptchaLoader();
-  }, []);
   return (
     <div
       id="contact"
@@ -111,6 +76,8 @@ const Contact = () => {
                 className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
                 required
                 name="name"
+                value={name}
+                onChange={(e) => setname(e.target.value)}
               />
 
               <input
@@ -119,6 +86,8 @@ const Contact = () => {
                 className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
                 required
                 name="email"
+                value={email}
+                onChange={(e) => setemail(e.target.value)}
               />
             </div>
           </div>
@@ -129,6 +98,8 @@ const Contact = () => {
               className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
               required
               name="message"
+              value={message}
+              onChange={(e) => setmessage(e.target.value)}
             ></textarea>
           </div>
           {/* <div className="h-captcha mb-6 max-w-full" data-captcha="true"></div> */}
