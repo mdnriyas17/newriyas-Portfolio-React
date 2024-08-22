@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Header = () => {
   return (
-    <div className="box-border w-11/12  text-center h-screen flex flex-col items-center justify-center gap-4 mt-8 sm:mt-8">
+    <div className="w-11/12  text-center h-screen flex flex-col items-center justify-center gap-4 mt-8 sm:mt-8">
       <img src={profile_img} alt="" className="rounded-full w-32" />
       <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
         Hi! I'm Mohamedriyas P</h3>
